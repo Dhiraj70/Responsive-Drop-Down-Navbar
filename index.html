@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- box icon cdn link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <i class="bx bx-menu"></i>
+            <div class="logo"><a href="#">CodingLab</a></div>
+            <div class="nav-links">
+
+                <div class="side-logo">
+                    <span class="logo-name">CodingLab</span>
+                    <i class="bx bx-x"></i>
+                </div>
+
+                <ul class="links">
+
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">HTML & CSS</a>
+                        <i class='bx bxs-chevron-down arrow html-arrow'></i>
+
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a href="#">wev designer</a></li>
+                            <li><a href="#">app designer</a></li>
+                            <li><a href="#">ui designer</a></li>
+                            <li><a href="#">ux designer</a></li>
+
+                            <li class="more"><a href="#">more</a>
+                                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                                <ul class="more-sub-menu sub-menu">
+                                    <li><a href="#">react js</a></li>
+                                    <li><a href="#">angular</a></li>
+                                    <li><a href="#">node js</a></li>
+                                    <li><a href="#">express js</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li><a href="#">JAVASCRIPT</a>
+                        <i class='bx bxs-chevron-down arrow js-arrow'></i>
+
+                        <ul class="js-sub-menu sub-menu">
+                            <li><a href="#">react js</a></li>
+                            <li><a href="#">angular</a></li>
+                            <li><a href="#">node js</a></li>
+                            <li><a href="#">express js</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <script>
+        let menuBtn = document.querySelector(".navbar .bx-menu")
+        let closeBtn = document.querySelector(".nav-links .bx-x")
+        let navlink = document.querySelector(".nav-links")
+
+        menuBtn.addEventListener("click", () => {
+            navlink.style.left = "0";
+        })
+
+        closeBtn.addEventListener("click", () => {
+            navlink.style.left = "-100%";
+        })
+
+
+        let htmlCssArrow = document.querySelector(".html-arrow")
+        htmlCssArrow.addEventListener("click", () => {
+            navlink.classList.toggle("show")
+        })
+
+        let moreAarrow = document.querySelector(".more-arrow")
+        moreAarrow.addEventListener("click", () => {
+            navlink.classList.toggle("show1")
+        })
+
+        let jsArrow = document.querySelector(".js-arrow")
+        jsArrow.addEventListener("click", () => {
+            navlink.classList.toggle("show2")
+        })
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
